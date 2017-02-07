@@ -32,6 +32,8 @@ int calibration(int valueMin, int valueMax, int value){
 
   if(res > 255){
     res = 255;
+  }else if(res <  0){
+    res = 0;
   }
   
   return res;
