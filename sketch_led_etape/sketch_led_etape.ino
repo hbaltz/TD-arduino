@@ -8,12 +8,15 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  for(int i =0 ; i <255 ; i=i+3){
+  int inc = 3; // incrément
+  int dly = 10; //délai en ms
+  
+  for(int i =0 ; i <255 ; i=i+inc){
     analogWrite(ledGPIO, i);   // turn the LED on (HIGH is the voltage level)
-    delay(10);                  
+    delay(dly);                  
   }
-  for(int j =255 ; j >0 ; j=j-3){
+  for(int j =255 ; j >0 ; j=j-inc){
     analogWrite(ledGPIO, j);   // turn the LED on (HIGH is the voltage level)
-    delay(10);                  
+    delay(dly);                  
   }
 }
