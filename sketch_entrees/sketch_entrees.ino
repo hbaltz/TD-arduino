@@ -3,8 +3,10 @@
  * Montage pull up
  */
 
+ // TODO supprimer les délais : https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay
+
 // Variables globales :
-bool run = false;
+bool blink_status = false;
 int buttonPin = 2;
 int oldState = LOW;
 
@@ -17,10 +19,10 @@ void loop() {
   int buttonState = digitalRead(buttonPin); // On lit l'état du bouton
 
   if(buttonState != oldState && buttonState == LOW){ // Si l'état est différent de l'état précédent, on change le statue du button
-     run = !run;                   
+     blink_status = !blink_status;                   
   }
 
-  if(run){ // Si run = true, on clignote
+  if(blink_status){ // Si run = true, on clignote
      clignote(LED_BUILTIN,100);
   }
 
