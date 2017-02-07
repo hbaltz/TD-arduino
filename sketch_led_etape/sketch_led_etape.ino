@@ -12,11 +12,11 @@ void loop() {
   int dly = 10; //délai en ms
   
   for(int i =0 ; i <255 ; i=i+inc){
-    analogWrite(ledGPIO, i);   // turn the LED on (HIGH is the voltage level)
+    analogWrite(ledGPIO, i);   
     delay(dly);                  
   }
   for(int j =255 ; j >0 ; j=j-inc){
-    analogWrite(ledGPIO, j);   // turn the LED on (HIGH is the voltage level)
+    analogWrite(ledGPIO, j);   
     delay(dly);                  
   }
 }
