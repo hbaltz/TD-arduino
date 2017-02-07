@@ -1,14 +1,16 @@
 /**
  * Lorsque l'on pousse le bouton une première fois le bouton clignote, une dexuième fois il s'arrête etc.
+ * Montage pull up
  */
 
+// Variables globales :
 bool run = false;
 int buttonPin = 2;
 int oldState = LOW;
 
 void setup() {
-  pinMode(buttonPin, INPUT);
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(buttonPin, INPUT); // 2 input
+  pinMode(LED_BUILTIN, OUTPUT); // 13 output
 }
 
 void loop() {
