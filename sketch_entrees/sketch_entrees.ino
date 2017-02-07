@@ -14,16 +14,12 @@ void setup() {
 void loop() {
   int buttonState = digitalRead(buttonPin); // On lit l'état du bouton
 
-  if(buttonState != oldState){ // Si l'état est différent de l'état précédent, on change le statue du button
-  
-    if(buttonState == LOW){
-      run = !run;                   
-    }
-    
+  if(buttonState != oldState && buttonState == LOW){ // Si l'état est différent de l'état précédent, on change le statue du button
+     run = !run;                   
   }
 
   if(run){ // Si run = true, on clignote
-     clignote(LED_BUILTIN,1000);
+     clignote(LED_BUILTIN,100);
   }
 
   oldState = buttonState; // On sauvegarde l'ancien état
